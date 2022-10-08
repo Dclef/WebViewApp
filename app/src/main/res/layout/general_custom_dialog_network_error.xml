@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal|center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_launcher"/>
+
+            <TextView
+                    android:id="@+id/tvDialogTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginLeft="4dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/tvDialogMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:autoLink="all"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingRight="20dp">
+
+            <TextView
+                    android:id="@+id/tvDialogCancel"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Cancel"
+                    android:textColor="@color/darkGray"
+                    android:textSize="15sp"/>
+
+            <TextView
+                    android:id="@+id/tvDialogRetry"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+                    android:gravity="bottom|right"
+                    android:text="Retry"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

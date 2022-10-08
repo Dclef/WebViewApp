@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="icu.dclef.webapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+
+            android:allowBackup="false"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:usesCleartextTraffic="true"
+            android:hardwareAccelerated="true"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:theme="@style/AppTheme"
+            tools:targetApi="m">
+        <activity
+                android:name="icu.dclef.webview.view.WebViewActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter
+                    android:autoVerify="true"
+                    tools:targetApi="m">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                        android:host="payrollplus.finpay.pk"
+                        android:scheme="https" />
+                <data
+                        android:host="payrollplus.finpay.pk"
+                        android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+                android:name="icu.dclef.webview.util.NetworkChangeReceiver"
+                android:exported="false"
+                android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action
+                        android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                        tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

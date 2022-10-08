@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebViewApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="noInternetConnection">No internet connection</string>
+    <string name="myhandler">MyHandlerKey</string>
+    <string name="keySendInternetStatus">Broadcast_Internet_Status</string>
+</resources>
